@@ -33,5 +33,20 @@
   <button onclick="alert('Hello! I am BOBBY AI.')">
     Start BOBBY AI
   </button>
+
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register(
+      "/Bobby-AI/service-worker.js"
+    ).then(() => {
+      console.log("BOBBY AI service worker registered!");
+    }).catch(error => {
+      console.error("Service worker registration failed:", error);
+    });
+  });
+}
+</script>
+
 </body>
 </html>
