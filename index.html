@@ -30,8 +30,8 @@
 <body>
   <h1>BOBBY AI</h1>
   <p>Your futuristic personal AI assistant.</p>
-  <button onclick="alert('Hello! I am BOBBY AI.')">
-    Start BOBBY AI
+  <button onclick="sayHello()">
+  Talk to BOBBY
   </button>
 
 <script>
@@ -47,6 +47,10 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
-
+<script>
+function sayHello() {
+  alert("Hello! I am BOBBY AI. How can I help you?");
+}
+</script>
 </body>
 </html>
