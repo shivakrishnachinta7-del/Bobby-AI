@@ -33,7 +33,23 @@
   <button onclick="sayHello()">
   Talk to BOBBY
   </button>
+  <div id="chat-area">
+  <h2>Chat with BOBBY</h2>
 
+  <div id="messages">
+    <p>BOBBY: Hello! How can I help    you?</p>
+  </div>
+
+  <input
+    type="text"
+    id="user-message"
+    placeholder="Type your message..."
+  >
+
+  <button id="send-button">
+    Send
+  </button>
+</div>
 <script>
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
