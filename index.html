@@ -68,5 +68,40 @@ function sayHello() {
   alert("Hello! I am BOBBY AI. How can I help you?");
 }
 </script>
+<script>
+const input = document.getElementById("user-message");
+const messages = document.getElementById("messages");
+const sendButton = document.getElementById("send-button");
+
+function sendMessage() {
+  const text = input.value.trim();
+
+  if (text === "") {
+    return;
+  }
+
+  // Display your message
+  const userMessage = document.createElement("p");
+  userMessage.textContent = "YOU: " + text;
+  messages.appendChild(userMessage);
+
+  // BOBBY's demo reply
+  const bobbyMessage = document.createElement("p");
+  bobbyMessage.textContent =
+    "BOBBY: Hello! I received your message. I'm learning to assist you!";
+  messages.appendChild(bobbyMessage);
+
+  // Clear the input box
+  input.value = "";
+}
+
+sendButton.addEventListener("click", sendMessage);
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+</script>
 </body>
 </html>
